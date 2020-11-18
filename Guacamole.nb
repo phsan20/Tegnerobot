@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    887515,      15519]
-NotebookOptionsPosition[    881178,      15424]
-NotebookOutlinePosition[    881520,      15439]
-CellTagsIndexPosition[    881477,      15436]
+NotebookDataLength[    888764,      15548]
+NotebookOptionsPosition[    882427,      15453]
+NotebookOutlinePosition[    882769,      15468]
+CellTagsIndexPosition[    882726,      15465]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -13920,9 +13920,9 @@ Cell[BoxData[{
      RowBox[{"{", 
       RowBox[{
       "lg", ",", "h", ",", "i", ",", "p", ",", "g", ",", "k", ",", "s", ",", 
-       "s1", ",", "s2", ",", "s3", ",", "s4", ",", "s5", ",", "s6", ",", "j", 
-       ",", "z", ",", "ld", ",", "L", ",", "Lsidst", ",", "slid1", ",", 
-       "zspidser", ",", "x", ",", "zbase", ",", "zdybest", ",", " ", 
+       "s0", ",", "s1", ",", "s2", ",", "s3", ",", "s4", ",", "s5", ",", "s6",
+        ",", "j", ",", "z", ",", "ld", ",", "L", ",", "Lsidst", ",", "slid1", 
+       ",", "zspidser", ",", "x", ",", "zbase", ",", "zdybest", ",", " ", 
        "AntalSpidsninger", ",", " ", "Loops"}], "}"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{
@@ -14123,6 +14123,16 @@ Cell[BoxData[{
              "ld", " ", "s\[AE]ttes", " ", "til", " ", "slid", " ", "ved", 
               " ", "kanttegning"}], " ", "*)"}], "\[IndentingNewLine]", 
             RowBox[{"zspidser", "+=", "1"}], ";", " ", "\[IndentingNewLine]", 
+            RowBox[{"s0", "=", "\"\<NK G00 X0 Y0 Z5\>\""}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"s0", "=", 
+             RowBox[{"StringReplace", "[", 
+              RowBox[{"s0", ",", 
+               RowBox[{"{", 
+                RowBox[{"\"\<K\>\"", "\[Rule]", 
+                 RowBox[{"ToString", "[", 
+                  RowBox[{"k", "+", "1"}], "]"}]}], "}"}]}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
             RowBox[{"s1", "=", "\"\<NK G00 X50 Y-50 Z5\>\""}], ";", 
             "\[IndentingNewLine]", 
             RowBox[{"s1", "=", 
@@ -14131,7 +14141,7 @@ Cell[BoxData[{
                RowBox[{"{", 
                 RowBox[{"\"\<K\>\"", "\[Rule]", 
                  RowBox[{"ToString", "[", 
-                  RowBox[{"k", "+", "1"}], "]"}]}], "}"}]}], "]"}]}], ";", 
+                  RowBox[{"k", "+", "2"}], "]"}]}], "}"}]}], "]"}]}], ";", 
             RowBox[{"(*", 
              RowBox[{
               RowBox[{
@@ -14152,7 +14162,7 @@ Cell[BoxData[{
                 RowBox[{
                  RowBox[{"\"\<K\>\"", "\[Rule]", 
                   RowBox[{"ToString", "[", 
-                   RowBox[{"k", "+", "2"}], "]"}]}], ",", 
+                   RowBox[{"k", "+", "3"}], "]"}]}], ",", 
                  RowBox[{"\"\<V\>\"", "\[Rule]", 
                   RowBox[{"ToString", "[", 
                    RowBox[{
@@ -14167,7 +14177,7 @@ Cell[BoxData[{
                 RowBox[{
                  RowBox[{"\"\<K\>\"", "\[Rule]", 
                   RowBox[{"ToString", "[", 
-                   RowBox[{"k", "+", "3"}], "]"}]}], ",", 
+                   RowBox[{"k", "+", "4"}], "]"}]}], ",", 
                  RowBox[{"\"\<V\>\"", "\[Rule]", 
                   RowBox[{"ToString", "[", 
                    RowBox[{
@@ -14182,7 +14192,7 @@ Cell[BoxData[{
                 RowBox[{
                  RowBox[{"\"\<K\>\"", "\[Rule]", 
                   RowBox[{"ToString", "[", 
-                   RowBox[{"k", "+", "4"}], "]"}]}], ",", 
+                   RowBox[{"k", "+", "5"}], "]"}]}], ",", 
                  RowBox[{"\"\<V\>\"", "\[Rule]", 
                   RowBox[{"ToString", "[", 
                    RowBox[{
@@ -14197,7 +14207,7 @@ Cell[BoxData[{
                 RowBox[{
                  RowBox[{"\"\<K\>\"", "\[Rule]", 
                   RowBox[{"ToString", "[", 
-                   RowBox[{"k", "+", "5"}], "]"}]}], ",", 
+                   RowBox[{"k", "+", "6"}], "]"}]}], ",", 
                  RowBox[{"\"\<V\>\"", "\[Rule]", 
                   RowBox[{"ToString", "[", 
                    RowBox[{
@@ -14212,7 +14222,7 @@ Cell[BoxData[{
                 RowBox[{
                  RowBox[{"\"\<K\>\"", "\[Rule]", 
                   RowBox[{"ToString", "[", 
-                   RowBox[{"k", "+", "6"}], "]"}]}], ",", 
+                   RowBox[{"k", "+", "7"}], "]"}]}], ",", 
                  RowBox[{"\"\<H\>\"", "\[Rule]", 
                   RowBox[{"ToString", "[", 
                    RowBox[{
@@ -14228,6 +14238,10 @@ Cell[BoxData[{
                     RowBox[{"i", "+", "6"}], "]"}], "]"}], "[", 
                     RowBox[{"[", "2", "]"}], "]"}], "]"}]}]}], "}"}]}], 
               "]"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"lg", "=", 
+             RowBox[{"Insert", "[", 
+              RowBox[{"lg", ",", "s0", ",", 
+               RowBox[{"-", "1"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
             RowBox[{"lg", "=", 
              RowBox[{"Insert", "[", 
               RowBox[{"lg", ",", "s1", ",", 
@@ -14337,6 +14351,16 @@ Cell[BoxData[{
        RowBox[{"Insert", "[", 
         RowBox[{"lg", ",", "s", ",", 
          RowBox[{"-", "1"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"s0", "=", "\"\<NK G00 X0 Y0 Z5\>\""}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"s0", "=", 
+       RowBox[{"StringReplace", "[", 
+        RowBox[{"s0", ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<K\>\"", "\[Rule]", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"k", "+", "1"}], "]"}]}], "}"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
       RowBox[{"s1", "=", "\"\<NK G00 X50 Y-50 Z5\>\""}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{"s1", "=", 
@@ -14345,7 +14369,7 @@ Cell[BoxData[{
          RowBox[{"{", 
           RowBox[{"\"\<K\>\"", "\[Rule]", 
            RowBox[{"ToString", "[", 
-            RowBox[{"k", "+", "1"}], "]"}]}], "}"}]}], "]"}]}], ";", 
+            RowBox[{"k", "+", "2"}], "]"}]}], "}"}]}], "]"}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{"s2", "=", "\"\<NK G01 X50 Y50 ZV\>\""}], ";", 
       "\[IndentingNewLine]", 
@@ -14356,7 +14380,7 @@ Cell[BoxData[{
           RowBox[{
            RowBox[{"\"\<K\>\"", "\[Rule]", 
             RowBox[{"ToString", "[", 
-             RowBox[{"k", "+", "2"}], "]"}]}], ",", 
+             RowBox[{"k", "+", "3"}], "]"}]}], ",", 
            RowBox[{"\"\<V\>\"", "\[Rule]", 
             RowBox[{"ToString", "[", 
              RowBox[{
@@ -14371,7 +14395,7 @@ Cell[BoxData[{
           RowBox[{
            RowBox[{"\"\<K\>\"", "\[Rule]", 
             RowBox[{"ToString", "[", 
-             RowBox[{"k", "+", "3"}], "]"}]}], ",", 
+             RowBox[{"k", "+", "4"}], "]"}]}], ",", 
            RowBox[{"\"\<V\>\"", "\[Rule]", 
             RowBox[{"ToString", "[", 
              RowBox[{
@@ -14386,7 +14410,7 @@ Cell[BoxData[{
           RowBox[{
            RowBox[{"\"\<K\>\"", "\[Rule]", 
             RowBox[{"ToString", "[", 
-             RowBox[{"k", "+", "4"}], "]"}]}], ",", 
+             RowBox[{"k", "+", "5"}], "]"}]}], ",", 
            RowBox[{"\"\<V\>\"", "\[Rule]", 
             RowBox[{"ToString", "[", 
              RowBox[{
@@ -14401,12 +14425,16 @@ Cell[BoxData[{
           RowBox[{
            RowBox[{"\"\<K\>\"", "\[Rule]", 
             RowBox[{"ToString", "[", 
-             RowBox[{"k", "+", "5"}], "]"}]}], ",", 
+             RowBox[{"k", "+", "6"}], "]"}]}], ",", 
            RowBox[{"\"\<V\>\"", "\[Rule]", 
             RowBox[{"ToString", "[", 
              RowBox[{
               RowBox[{"-", "zspidser"}], "-", "8"}], "]"}]}]}], "}"}]}], 
         "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"lg", "=", 
+       RowBox[{"Insert", "[", 
+        RowBox[{"lg", ",", "s0", ",", 
+         RowBox[{"-", "1"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"lg", "=", 
        RowBox[{"Insert", "[", 
         RowBox[{"lg", ",", "s1", ",", 
@@ -14511,7 +14539,8 @@ Cell[BoxData[{
    3.814683676741597*^9, 3.814683704132721*^9}, {3.814684615246377*^9, 
    3.814684632867321*^9}, {3.814685715671651*^9, 3.814685715990761*^9}, {
    3.8146877519854627`*^9, 3.814688473262211*^9}, {3.814688824753632*^9, 
-   3.814688856895691*^9}},ExpressionUUID->"25df3696-4951-4516-81fe-\
+   3.814688856895691*^9}, {3.8146889370511847`*^9, 
+   3.8146890508428783`*^9}},ExpressionUUID->"25df3696-4951-4516-81fe-\
 d020671a007f"],
 
 Cell[CellGroupData[{
@@ -15486,40 +15515,40 @@ Cell[815096, 13903, 199, 3, 32, "Output",ExpressionUUID->"5f2a1ce2-9976-4f16-bcb
 }, Open  ]],
 Cell[815310, 13909, 81, 0, 28, "Input",ExpressionUUID->"dd1b1052-d737-43b2-b1db-480865954be2"],
 Cell[815394, 13911, 81, 0, 28, "Input",ExpressionUUID->"690c2ab9-f9fe-4527-a193-20f28d5ce1d1"],
-Cell[815478, 13913, 28512, 601, 1720, "Input",ExpressionUUID->"25df3696-4951-4516-81fe-d020671a007f"],
+Cell[815478, 13913, 29761, 630, 1834, "Input",ExpressionUUID->"25df3696-4951-4516-81fe-d020671a007f"],
 Cell[CellGroupData[{
-Cell[844015, 14518, 581, 12, 48, "Input",ExpressionUUID->"f2eb4f33-7c22-4c03-ac17-39c7e229db26"],
-Cell[844599, 14532, 254, 3, 32, "Output",ExpressionUUID->"d7910653-fe38-4d18-8bd2-cca9a6fe1889"]
+Cell[845264, 14547, 581, 12, 48, "Input",ExpressionUUID->"f2eb4f33-7c22-4c03-ac17-39c7e229db26"],
+Cell[845848, 14561, 254, 3, 32, "Output",ExpressionUUID->"d7910653-fe38-4d18-8bd2-cca9a6fe1889"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[844890, 14540, 206, 2, 28, "Input",ExpressionUUID->"c452f04b-c0c3-4aa9-b67d-64c9cec4f8e4"],
-Cell[845099, 14544, 209, 3, 32, "Output",ExpressionUUID->"c22f5383-91a5-4004-ad30-ca58282ee021"]
+Cell[846139, 14569, 206, 2, 28, "Input",ExpressionUUID->"c452f04b-c0c3-4aa9-b67d-64c9cec4f8e4"],
+Cell[846348, 14573, 209, 3, 32, "Output",ExpressionUUID->"c22f5383-91a5-4004-ad30-ca58282ee021"]
 }, Open  ]],
-Cell[845323, 14550, 202, 3, 28, "Input",ExpressionUUID->"0cdd7370-5bc8-480a-971d-93530eebad38"],
+Cell[846572, 14579, 202, 3, 28, "Input",ExpressionUUID->"0cdd7370-5bc8-480a-971d-93530eebad38"],
 Cell[CellGroupData[{
-Cell[845550, 14557, 148, 2, 28, "Input",ExpressionUUID->"67c70773-20db-42cf-afec-0d3325617c16"],
-Cell[845701, 14561, 10422, 265, 112, "Output",ExpressionUUID->"3cdee748-38e4-477d-af4c-4f939107c59f"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[856160, 14831, 131, 3, 28, "Input",ExpressionUUID->"38e9c3bd-fc01-420a-bc07-1b5c511df37a"],
-Cell[856294, 14836, 185, 4, 22, "Print",ExpressionUUID->"e2c2d835-30b7-4c95-9e4b-54748aa7e964"],
-Cell[856482, 14842, 420, 10, 23, "Message",ExpressionUUID->"3d6b0921-b4f9-4b56-a1ca-eb4d4b286630"],
-Cell[856905, 14854, 529, 11, 23, "Message",ExpressionUUID->"ef1d9958-60a3-49e3-a328-cd8c564103cb"],
-Cell[857437, 14867, 372, 9, 21, "Message",ExpressionUUID->"3b856f0b-63ba-44d2-b083-70baaee62d4e"]
-}, Open  ]],
-Cell[857824, 14879, 154, 3, 28, "Input",ExpressionUUID->"e44d6267-00bb-4339-aa61-776d2fff349e"],
-Cell[857981, 14884, 296, 7, 28, "Input",ExpressionUUID->"78479ac3-e9bd-4066-bbb6-98c3d3080c09"],
-Cell[CellGroupData[{
-Cell[858302, 14895, 1518, 37, 67, "Input",ExpressionUUID->"fd08ebdb-1684-42bd-b730-abbef0b94355"],
-Cell[859823, 14934, 255, 3, 32, "Output",ExpressionUUID->"1bac2b23-5d55-4668-8b20-3f9c9a562c8e"]
+Cell[846799, 14586, 148, 2, 28, "Input",ExpressionUUID->"67c70773-20db-42cf-afec-0d3325617c16"],
+Cell[846950, 14590, 10422, 265, 112, "Output",ExpressionUUID->"3cdee748-38e4-477d-af4c-4f939107c59f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[860115, 14942, 189, 4, 28, "Input",ExpressionUUID->"b22ca0e3-c0aa-46b0-ae3a-07b20f106753"],
-Cell[860307, 14948, 258, 9, 46, "Output",ExpressionUUID->"56ca2724-29c9-4a64-87a8-d159c648ed3a"]
+Cell[857409, 14860, 131, 3, 28, "Input",ExpressionUUID->"38e9c3bd-fc01-420a-bc07-1b5c511df37a"],
+Cell[857543, 14865, 185, 4, 22, "Print",ExpressionUUID->"e2c2d835-30b7-4c95-9e4b-54748aa7e964"],
+Cell[857731, 14871, 420, 10, 23, "Message",ExpressionUUID->"3d6b0921-b4f9-4b56-a1ca-eb4d4b286630"],
+Cell[858154, 14883, 529, 11, 23, "Message",ExpressionUUID->"ef1d9958-60a3-49e3-a328-cd8c564103cb"],
+Cell[858686, 14896, 372, 9, 21, "Message",ExpressionUUID->"3b856f0b-63ba-44d2-b083-70baaee62d4e"]
+}, Open  ]],
+Cell[859073, 14908, 154, 3, 28, "Input",ExpressionUUID->"e44d6267-00bb-4339-aa61-776d2fff349e"],
+Cell[859230, 14913, 296, 7, 28, "Input",ExpressionUUID->"78479ac3-e9bd-4066-bbb6-98c3d3080c09"],
+Cell[CellGroupData[{
+Cell[859551, 14924, 1518, 37, 67, "Input",ExpressionUUID->"fd08ebdb-1684-42bd-b730-abbef0b94355"],
+Cell[861072, 14963, 255, 3, 32, "Output",ExpressionUUID->"1bac2b23-5d55-4668-8b20-3f9c9a562c8e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[860602, 14962, 198, 3, 28, "Input",ExpressionUUID->"9da7ea2a-40b3-465c-921b-0c439e8b63f5"],
-Cell[860803, 14967, 20359, 454, 141, "Output",ExpressionUUID->"29fe9715-cd7a-4c71-9274-d4bd9f1d72e4"]
+Cell[861364, 14971, 189, 4, 28, "Input",ExpressionUUID->"b22ca0e3-c0aa-46b0-ae3a-07b20f106753"],
+Cell[861556, 14977, 258, 9, 46, "Output",ExpressionUUID->"56ca2724-29c9-4a64-87a8-d159c648ed3a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[861851, 14991, 198, 3, 28, "Input",ExpressionUUID->"9da7ea2a-40b3-465c-921b-0c439e8b63f5"],
+Cell[862052, 14996, 20359, 454, 141, "Output",ExpressionUUID->"29fe9715-cd7a-4c71-9274-d4bd9f1d72e4"]
 }, Open  ]]
 }
 ]
